@@ -76,3 +76,22 @@ listOfCircles.addEventListener("click", function (event) {
         }
     }
 });
+
+// Set value for <span> element when user change position of slider
+difficultyRange.addEventListener('input', function () {
+    difficultyValue.innerHTML = this.value;
+});
+
+// If the user releases the slider, a new game will start
+difficultyRange.addEventListener('mouseup', function () {
+    generateCircles(this.value);
+    hideFooter();
+    hexCodeText.style.color = "black";
+});
+
+// If the user presses the button, a new game will start
+newGameBtn.addEventListener("click", function () {
+    generateCircles();
+    hideFooter();
+    hexCodeText.style.color = "black";
+});
