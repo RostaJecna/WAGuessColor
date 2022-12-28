@@ -15,3 +15,14 @@ footer.style.display = "none";
 newGameBtn.style.display = "none";
 
 difficultyValue.innerHTML = difficultyRange.value; // Set for <span> value of <input type="range">
+
+/* Declaring methods */
+
+function generateHex() {
+    return Math.floor(Math.random() * 16777215).toString(16);
+}
+
+function hideFooter() {
+    footer.classList.remove("d-flex");
+    newGameBtn.classList.remove("d-grid");
+}
