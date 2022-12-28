@@ -95,3 +95,8 @@ newGameBtn.addEventListener("click", function () {
     hideFooter();
     hexCodeText.style.color = "black";
 });
+
+/* Calling methods */
+
+generateCircles();
+hideFooter();
