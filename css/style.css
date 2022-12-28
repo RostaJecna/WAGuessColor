@@ -24,3 +24,7 @@ li.selected {
 .rounded-circle:hover {
     transform: scale(1.1);
 }
+
+.to-uppercase {
+    text-transform: uppercase;
+}
