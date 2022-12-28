@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+p {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+li.selected {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.rounded-circle {
+    width: 75px;
+    height: 75px;
+    margin: 6px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.rounded-circle:hover {
+    transform: scale(1.1);
+}
+
+.to-uppercase {
+    text-transform: uppercase;
+}
