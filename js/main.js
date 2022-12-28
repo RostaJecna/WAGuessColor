@@ -48,3 +48,31 @@ function hideFooter() {
     footer.classList.remove("d-flex");
     newGameBtn.classList.remove("d-grid");
 }
+
+/* Declaring event listener */
+
+// Performs actions depending on the condition when the user clicks on the circle
+listOfCircles.addEventListener("click", function (event) {
+    if (event.target.matches("li") && !event.target.classList.contains("selected")) {
+        let targetCircle = event.target;
+        
+        if (targetCircle.id == correctCircleID) {
+            footer.classList.add("d-flex");
+            newGameBtn.classList.add("d-grid");
+            hexCodeText.style.color = correctCircleID;
+            infoSelect.textContent = "You guessed the color!";
+
+            let circles = listOfCircles.getElementsByTagName("li");
+            for (let i = 0; i < circles.length; i++) {
+                if (circles[i].id != correctCircleID) {
+                    circles[i].classList.add("selected");
+                }
+            }
+        }
+        else {
+            footer.classList.add("d-flex");
+            targetCircle.classList.add("selected");
+            infoSelect.innerHTML = `You guessed wrong, it's <span style='color: ${targetCircle.id}'>${targetCircle.id}</span>!`;
+        }
+    }
+});
